@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<c3p0-config>
+  <default-config>
+    <property name="driverClass">com.mysql.jdbc.Driver</property>
+    <property name="jdbcUrl">jdbc:mysql:///OrderManager</property>
+    <property name="user">OrderManager</property>
+    <property name="password">OrderManager</property>
+  </default-config>
+</c3p0-config>
+	
