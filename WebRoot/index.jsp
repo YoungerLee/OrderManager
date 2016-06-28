@@ -10,6 +10,7 @@
   		欢迎光临,游客
   		<a href="${pageContext.request.contextPath}/regist.jsp">注册</a>
   		<a href="${pageContext.request.contextPath}/login.jsp">登录</a>
+  		<a href="${pageContext.request.contextPath}/sys/prodList.do?thispage=1">浏览商品</a>
   	</c:if>
   	<c:if test="${sessionScope.user != null}">
   		欢迎回来,${sessionScope.user.username }

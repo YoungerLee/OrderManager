@@ -15,12 +15,12 @@ import com.order.util.TransactionManager;
 public class ProdDaoImpl implements ProdDao {
 
 	public void addProd(Product prod) {
-		String sql = "insert into products values (?,?,?,?,?,?,?)";
+		String sql = "insert into products values (?,?,?,?,?,?,?,?)";
 		try {
 			QueryRunner runner = new QueryRunner(TransactionManager.getSource());
 			runner.update(sql, prod.getId(), prod.getName(), prod.getImgurl(),
 					prod.getPrice(), prod.getPnum(), prod.getStartTime(),
-					prod.getEndTime());
+					prod.getEndTime(), prod.getAdmin_id());
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw new RuntimeException(e);
@@ -33,6 +33,19 @@ public class ProdDaoImpl implements ProdDao {
 			QueryRunner runner = new QueryRunner(TransactionManager.getSource());
 			return runner.query(sql,
 					new BeanListHandler<Product>(Product.class));
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
+	}
+
+	@Override
+	public List<Product> findProdByAdmin(Integer admin_id) {
+		String sql = "select * from products where admin_id=?";
+		try {
+			QueryRunner runner = new QueryRunner(TransactionManager.getSource());
+			return runner.query(sql,
+					new BeanListHandler<Product>(Product.class), admin_id);
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw new RuntimeException(e);

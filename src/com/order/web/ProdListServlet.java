@@ -11,8 +11,7 @@ import com.order.domain.PageProd;
 import com.order.factory.BasicFactory;
 import com.order.service.ProdService;
 
-@SuppressWarnings("serial")
-public class PageProdServlet extends HttpServlet {
+public class ProdListServlet extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -25,7 +24,7 @@ public class PageProdServlet extends HttpServlet {
 		PageProd pageProd = service.pageProd(thispage, rowperpage);
 		// 3.存入request域中,带到pageList.jsp页面中进行显示
 		request.setAttribute("pageProd", pageProd);
-		request.getRequestDispatcher("/prodMana.jsp")
+		request.getRequestDispatcher("/prodList.jsp")
 				.forward(request, response);
 	}
 

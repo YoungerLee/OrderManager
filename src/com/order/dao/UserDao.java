@@ -1,5 +1,6 @@
 package com.order.dao;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import com.order.domain.User;
@@ -78,4 +79,27 @@ public interface UserDao extends Dao {
 	 */
 	void updateUser(User user);
 
+	/**
+	 * 查找用户姓名
+	 * 
+	 * @param id
+	 * @return
+	 */
+	User findUsernameById(Integer id);
+
+	/**
+	 * 扣除余额
+	 * 
+	 * @param id
+	 * @param money
+	 */
+	void decCash(Integer id, Double money) throws SQLException;
+
+	/**
+	 * 增加余额
+	 * 
+	 * @param id
+	 * @param money
+	 */
+	void incCash(Integer id, Double money);
 }

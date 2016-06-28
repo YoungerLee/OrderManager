@@ -15,11 +15,19 @@ public interface ProdDao extends Dao {
 	void addProd(Product prod);
 
 	/**
-	 * 查询所有
+	 * 查询所有商品
 	 * 
 	 * @return
 	 */
 	List<Product> findAllProd();
+
+	/**
+	 * 查询指定管理员的商品
+	 * 
+	 * @param admin_id
+	 * @return
+	 */
+	List<Product> findProdByAdmin(Integer admin_id);
 
 	/**
 	 * 根据id查找商品

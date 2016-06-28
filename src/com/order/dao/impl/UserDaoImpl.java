@@ -1,5 +1,6 @@
 package com.order.dao.impl;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import org.apache.commons.dbutils.QueryRunner;
@@ -106,6 +107,40 @@ public class UserDaoImpl implements UserDao {
 			QueryRunner runner = new QueryRunner(TransactionManager.getSource());
 			runner.update(sql, user.getUsername(), user.getTelNum(),
 					user.getId());
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
+	}
+
+	@Override
+	public User findUsernameById(Integer id) {
+		String sql = "select u.username from users u where u.id = ?";
+		try {
+			QueryRunner runner = new QueryRunner(TransactionManager.getSource());
+			return runner.query(sql, new BeanHandler<User>(User.class), id);
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
+	}
+
+	@Override
+	public void decCash(Integer id, Double money) throws SQLException {
+		String sql = "update users set cash = cash-? where id = ? and cash-?>=0";
+		QueryRunner runner = new QueryRunner(TransactionManager.getSource());
+		int count = runner.update(sql, money, id, money);
+		if (count <= 0) {
+			throw new SQLException("库存不足!");
+		}
+	}
+
+	@Override
+	public void incCash(Integer id, Double money) {
+		String sql = "update users set cash = cash+? where id = ? ";
+		try {
+			QueryRunner runner = new QueryRunner(TransactionManager.getSource());
+			runner.update(sql, money, id);
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw new RuntimeException(e);

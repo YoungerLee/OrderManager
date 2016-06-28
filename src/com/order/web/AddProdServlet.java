@@ -22,6 +22,7 @@ import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
 import com.order.domain.Product;
+import com.order.domain.User;
 import com.order.factory.BasicFactory;
 import com.order.service.ProdService;
 import com.order.util.IOUtils;
@@ -109,8 +110,10 @@ public class AddProdServlet extends HttpServlet {
 				}
 			}
 			// 2.调用Service中提供的方法,在数据库中添加商品
+			User admin = (User) request.getSession().getAttribute("user");
 			Product prod = new Product();
 			BeanUtils.populate(prod, paramMap);
+			prod.setAdmin_id(admin.getId());
 			service.addProd(prod);
 
 			// 3.提示成功,回到主页

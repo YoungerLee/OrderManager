@@ -8,6 +8,7 @@ public class User implements Serializable {
 	private String password;
 	private String telNum;
 	private Integer role_id;
+	private Double cash;
 
 	public Integer getId() {
 		return id;
@@ -47,5 +48,13 @@ public class User implements Serializable {
 
 	public void setRole_id(Integer role_id) {
 		this.role_id = role_id;
+	}
+
+	public Double getCash() {
+		return cash;
+	}
+
+	public void setCash(Double cash) {
+		this.cash = cash;
 	}
 }

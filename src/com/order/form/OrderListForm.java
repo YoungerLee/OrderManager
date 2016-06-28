@@ -1,23 +1,25 @@
-package com.order.domain;
+package com.order.form;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
-import java.util.List;
+import java.util.Map;
 
-public class Order implements Serializable {
+import com.order.domain.Product;
+
+public class OrderListForm implements Serializable {
 	private String id;
 	private Double money;
 	private String address;
 	private Integer payState;
-	private Integer admin_id;
-	private Integer courier_id;
+	private String admin;
+	private String courier;
 	private Timestamp orderTime;
 	private Timestamp sendTime;
 	private Timestamp signTime;
 	private Integer sendFlag; // 1---已发货，0---未发货
 	private Integer signFlag; // 1---已签收，0---未签收
-	private Integer user_id;
-	private List<OrderItem> list;
+	private String username;
+	private Map<Product, Integer> prodMap;
 
 	public String getId() {
 		return id;
@@ -51,20 +53,20 @@ public class Order implements Serializable {
 		this.payState = payState;
 	}
 
-	public Integer getAdmin_id() {
-		return admin_id;
+	public String getAdmin() {
+		return admin;
 	}
 
-	public void setAdmin_id(Integer admin_id) {
-		this.admin_id = admin_id;
+	public void setAdmin(String admin) {
+		this.admin = admin;
 	}
 
-	public Integer getCourier_id() {
-		return courier_id;
+	public String getCourier() {
+		return courier;
 	}
 
-	public void setCourier_id(Integer courier_id) {
-		this.courier_id = courier_id;
+	public void setCourier(String courier) {
+		this.courier = courier;
 	}
 
 	public Timestamp getOrderTime() {
@@ -107,19 +109,19 @@ public class Order implements Serializable {
 		this.signFlag = signFlag;
 	}
 
-	public Integer getUser_id() {
-		return user_id;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setUser_id(Integer user_id) {
-		this.user_id = user_id;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
-	public List<OrderItem> getList() {
-		return list;
+	public Map<Product, Integer> getProdMap() {
+		return prodMap;
 	}
 
-	public void setList(List<OrderItem> list) {
-		this.list = list;
+	public void setProdMap(Map<Product, Integer> prodMap) {
+		this.prodMap = prodMap;
 	}
 }

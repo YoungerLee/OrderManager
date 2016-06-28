@@ -23,6 +23,14 @@ public interface ProdService extends Service {
 	List<Product> findAllProd();
 
 	/**
+	 * 查询指定管理员的所有商品
+	 * 
+	 * @param admin_id
+	 * @return
+	 */
+	List<Product> findProdByAdmin(Integer admin_id);
+
+	/**
 	 * 根据id查找商品信息
 	 * 
 	 * @param id

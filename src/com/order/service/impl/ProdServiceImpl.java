@@ -21,6 +21,11 @@ public class ProdServiceImpl implements ProdService {
 		return dao.findAllProd();
 	}
 
+	@Override
+	public List<Product> findProdByAdmin(Integer admin_id) {
+		return dao.findProdByAdmin(admin_id);
+	}
+
 	public Product findProdById(String id) {
 		return dao.findProdById(id);
 	}

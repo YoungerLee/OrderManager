@@ -69,6 +69,81 @@
     <servlet-name>UpdateCourierServlet</servlet-name>
     <servlet-class>com.order.web.UpdateCourierServlet</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>ProdListServlet</servlet-name>
+    <servlet-class>com.order.web.ProdListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddCartServlet</servlet-name>
+    <servlet-class>com.order.web.AddCartServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ChangeCartServlet</servlet-name>
+    <servlet-class>com.order.web.ChangeCartServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ClearCartServlet</servlet-name>
+    <servlet-class>com.order.web.ClearCartServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DelCartServlet</servlet-name>
+    <servlet-class>com.order.web.DelCartServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddOrderServlet</servlet-name>
+    <servlet-class>com.order.web.AddOrderServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>OrderListServlet</servlet-name>
+    <servlet-class>com.order.web.OrderListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PayInfoServlet</servlet-name>
+    <servlet-class>com.order.web.PayInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PayServlet</servlet-name>
+    <servlet-class>com.order.web.PayServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SendServlet</servlet-name>
+    <servlet-class>com.order.web.SendServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>OrderManaServlet</servlet-name>
+    <servlet-class>com.order.web.OrderManaServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>OrderSendServlet</servlet-name>
+    <servlet-class>com.order.web.OrderSendServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SignServlet</servlet-name>
+    <servlet-class>com.order.web.SignServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>OrderSentServlet</servlet-name>
+    <servlet-class>com.order.web.OrderSentServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DelOrderServlet</servlet-name>
+    <servlet-class>com.order.web.DelOrderServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
  
@@ -135,6 +210,66 @@
   <servlet-mapping>
     <servlet-name>UpdateCourierServlet</servlet-name>
     <url-pattern>/sys/updateCourier.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ProdListServlet</servlet-name>
+    <url-pattern>/sys/prodList.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddCartServlet</servlet-name>
+    <url-pattern>/sys/addCart.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChangeCartServlet</servlet-name>
+    <url-pattern>/sys/changeCart.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ClearCartServlet</servlet-name>
+    <url-pattern>/sys/clearCart.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelCartServlet</servlet-name>
+    <url-pattern>/sys/delCart.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddOrderServlet</servlet-name>
+    <url-pattern>/sys/addOrder.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OrderListServlet</servlet-name>
+    <url-pattern>/sys/orderList.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PayInfoServlet</servlet-name>
+    <url-pattern>/sys/payInfo.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PayServlet</servlet-name>
+    <url-pattern>/sys/pay.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SendServlet</servlet-name>
+    <url-pattern>/sys/send.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OrderManaServlet</servlet-name>
+    <url-pattern>/sys/orderMana.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OrderSendServlet</servlet-name>
+    <url-pattern>/sys/orderSend.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SignServlet</servlet-name>
+    <url-pattern>/sys/sign.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OrderSentServlet</servlet-name>
+    <url-pattern>/sys/orderSent.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelOrderServlet</servlet-name>
+    <url-pattern>/sys/delOrder.do</url-pattern>
   </servlet-mapping>
   
   

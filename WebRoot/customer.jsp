@@ -1,28 +1,19 @@
-<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
-<%
-String path = request.getContextPath();
-String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-%>
-
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <base href="<%=basePath%>">
-    
-    <title>My JSP 'customer.jsp' starting page</title>
-    
-	<meta http-equiv="pragma" content="no-cache">
-	<meta http-equiv="cache-control" content="no-cache">
-	<meta http-equiv="expires" content="0">    
-	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-	<meta http-equiv="description" content="This is my page">
-	<!--
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	-->
-
+	<script type="text/javascript">
+  	</script>
   </head>
-  
   <body>
-    This is my JSP page. <br>
+	  <div align="center">
+	  	<h1>我的主页</h1><hr>
+	  	<a href="${pageContext.request.contextPath}/sys/prodList.do?thispage=1">查看商品</a>
+	  	<a href="${pageContext.request.contextPath}/cart.jsp">查看购物车</a>
+	  	<a href="${pageContext.request.contextPath}/sys/orderList.do">查看订单</a>
+	  	<a href="${pageContext.request.contextPath}/sys/logout.do">注销</a>
+	  </div>
   </body>
 </html>
+  

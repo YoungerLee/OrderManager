@@ -15,7 +15,7 @@
 	  	<h1>我的主页</h1><hr>
 	  	<a href="${pageContext.request.contextPath}/addProd.jsp">添加商品</a>
 	  	<a href="${pageContext.request.contextPath}/sys/pageProdList.do?thispage=1">商品管理</a>
-	  	<a href="${pageContext.request.contextPath}/sys/orderList.do">订单列表</a>
+	  	<a href="${pageContext.request.contextPath}/sys/orderMana.do">订单列表</a>
 	  	<a href="${pageContext.request.contextPath}/sys/courierList.do">查看快递员</a>
 	  	<a href="${pageContext.request.contextPath}/sys/logout.do">注销</a>
 	  </div>
