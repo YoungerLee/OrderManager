@@ -38,6 +38,7 @@ public class RegistServlet extends HttpServlet {
 			User user = new User();
 			BeanUtils.populate(user, request.getParameterMap());
 			user.setPassword(MD5Utils.md5(user.getPassword()));
+			user.setCash(0.0);
 			// 3.调用Service注册用户
 			service.regist(user);
 

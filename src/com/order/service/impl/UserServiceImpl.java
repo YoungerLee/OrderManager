@@ -70,4 +70,9 @@ public class UserServiceImpl implements UserService {
 		user.setTelNum(courier.getTelNum());
 		dao.updateUser(user);
 	}
+
+	@Override
+	public void delUserByID(Integer id) {
+		dao.delUser(id);
+	}
 }

@@ -1,0 +1,4 @@
+/OrderManager/index.jsp
+/OrderManager/prodList.do
+/OrderManager/prodList.jsp
+/OrderManager/regist.jsp

@@ -15,11 +15,11 @@ import com.order.util.TransactionManager;
 public class UserDaoImpl implements UserDao {
 
 	public void addUser(User user) {
-		String sql = "insert into users values(null,?,?,?,?)";
+		String sql = "insert into users values(null,?,?,?,?,?)";
 		try {
 			QueryRunner runner = new QueryRunner(TransactionManager.getSource());
 			runner.update(sql, user.getUsername(), user.getPassword(),
-					user.getTelNum(), user.getRole_id());
+					user.getTelNum(), user.getRole_id(), user.getCash());
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw new RuntimeException(e);

@@ -65,4 +65,11 @@ public interface UserService extends Service {
 	 * @param courier
 	 */
 	void updateCourier(Courier courier);
+
+	/**
+	 * 删除用户
+	 * 
+	 * @param id
+	 */
+	void delUserByID(Integer id);
 }

@@ -129,6 +129,11 @@
     <servlet-name>DelOrderServlet</servlet-name>
     <servlet-class>com.order.web.DelOrderServlet</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>DelCourierServlet</servlet-name>
+    <servlet-class>com.order.web.DelCourierServlet</servlet-class>
+  </servlet>
+
 
 
 
@@ -271,6 +276,10 @@
     <servlet-name>DelOrderServlet</servlet-name>
     <url-pattern>/sys/delOrder.do</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelCourierServlet</servlet-name>
+    <url-pattern>/sys/delCourier.do</url-pattern>
+  </servlet-mapping>
   
   
   <!-- 过滤器配置开始 -->
@@ -296,7 +305,7 @@
 		<filter-name>AutologinFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-	<!--  <filter>
+	<filter>
 		<description>权限过滤器</description>
 		<filter-name>PrivilegeFilter</filter-name>
 		<filter-class>com.order.filter.PrivilegeFilter</filter-class>
@@ -305,18 +314,8 @@
 		<filter-name>PrivilegeFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-	-->
+	
 	<!-- 过滤器配置结束 -->
-  
-
-
-
-
-
-
-
-
- 
   
 
   <!-- 主页配置 -->

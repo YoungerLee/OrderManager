@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class Privilege implements Serializable {
 	private Integer role_id;
-	private Integer func_id;
+	private String path;
 
 	public Integer getRole_id() {
 		return role_id;
@@ -14,11 +14,11 @@ public class Privilege implements Serializable {
 		this.role_id = role_id;
 	}
 
-	public Integer getFunc_id() {
-		return func_id;
+	public String getPath() {
+		return path;
 	}
 
-	public void setFunc_id(Integer func_id) {
-		this.func_id = func_id;
+	public void setPath(String path) {
+		this.path = path;
 	}
 }
