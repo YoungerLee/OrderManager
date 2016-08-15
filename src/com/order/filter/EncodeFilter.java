@@ -35,7 +35,8 @@ public class EncodeFilter implements Filter {
 	public void init(FilterConfig filterConfig) throws ServletException {
 		this.config = filterConfig;
 		this.context = filterConfig.getServletContext();
-		this.encode = context.getInitParameter("encode");
+		// this.encode = context.getInitParameter("encode");
+		this.encode = "utf-8";
 	}
 
 	private class MyHttpServletRequest extends HttpServletRequestWrapper {
